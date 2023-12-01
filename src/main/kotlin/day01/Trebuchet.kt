@@ -8,9 +8,9 @@ fun main() {
     println(getSumOf(input, false))
 }
 
-fun getInputAsList(path: String): List<String> = File(path).bufferedReader().readLines()
+fun getInputAsList(path: String) = File(path).bufferedReader().readLines()
 
-fun getSumOf(input: List<String>, isFirstTask: Boolean): Int =
+fun getSumOf(input: List<String>, isFirstTask: Boolean) =
     if (isFirstTask)
         input.sumOf { getValue(it.replace("\\D".toRegex(), "")) }
     else
